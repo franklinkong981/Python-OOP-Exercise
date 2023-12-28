@@ -12,6 +12,7 @@ class WordFinder:
         self.word_list = []
         self.read_file(path_to_file)
         self.print_words_read()
+    
     def read_file(self, path_to_file):
         """It reads in the words at the file specified by the relative path path_to_file and appends each of the words it reads into
         the word_list attribute."""
@@ -19,10 +20,13 @@ class WordFinder:
         for line in file_reader:
             trimmed_line = line.strip()
             self.word_list.append(trimmed_line)
+        file_reader.close()
+    
     def print_words_read(self):
         """Prints out how many words were read in the file."""
         word_list_len = len(self.word_list)
         print(f"{word_list_len} words read")
+    
     def random(self):
         """Selects a random word from the list of words it read in from the file and returns it."""
         random_index = randint(0, len(self.word_list) - 1)

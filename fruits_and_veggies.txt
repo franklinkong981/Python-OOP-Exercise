@@ -1,0 +1,15 @@
+# Fruits
+
+Apple
+
+Banana
+
+Cherry
+
+# Vegetables
+
+Eggplant
+
+Kale
+
+Spinach

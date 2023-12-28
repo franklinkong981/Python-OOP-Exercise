@@ -18,6 +18,9 @@ class SerialGenerator:
 
     >>> serial.generate()
     100
+
+    >>> serial
+    <SerialGenerator: start value is 100, current value is 100, next value to be returned is 101>
     """
     def __init__(self, start):
         """Initializes the start attribute and initializes the current value attribute to start value - 1. 
@@ -37,4 +40,9 @@ class SerialGenerator:
         """Resets the current value to its initial value when the SerialGenerator object was first initialized: Its start value
         minus one."""
         self.current_value = self.start_value - 1
+    
+    def __repr__(self):
+        """Prints out the description of the current instance of SerialGenerator. It prints out the start value, the current value,
+        and the next value that will be returned"""
+        return f"<SerialGenerator: start value is {self.start_value}, current value is {self.current_value}, next value to be returned is {self.current_value + 1}>"
 

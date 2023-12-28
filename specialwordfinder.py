@@ -7,6 +7,19 @@ class SpecialWordFinder(WordFinder):
     This is a class that reads in a list of words from a text file (one word per line) and generates a list of the words in the file.
     HOWEVER, it does not read in any lines that start with a # nor does it read in blank lines.
     It prints how many words it read in from the file and also offers functionality to return a random word from the file.
+
+    >>> special_word_finder = SpecialWordFinder("fruits_and_veggies.txt")
+    6 words read
+
+    >>> special_word_finder.random() in special_word_finder.word_list
+    True
+
+    >>> special_word_finder.random() in special_word_finder.word_list
+    True
+
+    >>> special_word_finder.random() in special_word_finder.word_list
+    True
+
     """
     def __init__(self, path_to_file):
         """Initializes the SpecialWordFinder by calling the constructor of the WordFinder class. The only difference is that 

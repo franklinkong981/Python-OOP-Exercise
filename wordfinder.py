@@ -5,6 +5,18 @@ class WordFinder:
     """
     This is a class that reads in a list of words from a text file (one word per line) and generates a list of the words in the file.
     It prints how many words it read in from the file and also offers functionality to return a random word from the file.
+
+    >>> word_finder = WordFinder("fruits.txt")
+    10 words read
+
+    >>> word_finder.random() in word_finder.word_list
+    True
+
+    >>> word_finder.random() in word_finder.word_list
+    True
+
+    word_finder.random() in word_finder.word_list
+    True
     """
     def __init__(self, path_to_file):
         """Initializes the WordFinder instance. It reads each word in the file specified in the relative path to the file 
